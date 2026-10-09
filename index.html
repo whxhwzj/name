@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>欢迎来到我的首页</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background: url("bg.png") no-repeat center center;
+            background-size: cover;
+            height: 100vh;
+            font-family: sans-serif;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+        }
+        .card{
+            width: 440px;
+            padding:40px 24px;
+            background-color: rgba(255,255,255,0.25);
+            backdrop-filter: blur(8px);
+            border-radius:22px;
+            text-align:center;
+            color:white;
+        }
+        .avatar{
+            width: 104px;
+            height:104px;
+            border-radius:50%;
+            border:3px solid #ffffff;
+            object-fit:cover;
+            margin-bottom:18px;
+        }
+        h1{
+            font-size:34px;
+            margin-bottom:22px;
+        }
+        .info p{
+            font-size:17px;
+            margin:9px 0;
+        }
+        .welcome-text{
+            margin:32px 0;
+            line-height:1.85;
+            font-size:18px;
+        }
+        .enter-btn{
+            padding:13px 46px;
+            font-size:22px;
+            border:2px solid white;
+            background:transparent;
+            color:white;
+            border-radius:30px;
+            cursor:pointer;
+            transition:0.3s;
+        }
+        .enter-btn:hover{
+            background-color:rgba(255,255,255,0.35);
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img class="avatar" src="avatar.png" alt="头像">
+        <h1>Ren Changhong</h1>
+        <div class="info">
+            <p>Shandong Normal University</p >
+            <p>School of Computer Science and Technology</p >
+        </div>
+        <div class="welcome-text">
+            <p>Welcome to my personal website!</p >
+            <p>If you want to know more about me</p >
+            <p>please click</p >
+        </div>
+        <button class="enter-btn" onclick="window.location.href='interest.html'">Enter</button>
+    </div>
+</body>
+</html>

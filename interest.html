@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>兴趣爱好</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, sans-serif;
+        }
+        body{
+            background-color: #f9fcf0;
+            padding: 40px 20px;
+        }
+        .wrap{
+            max-width: 820px;
+            margin: 0 auto;
+        }
+        .section{
+            margin-bottom: 60px;
+        }
+        .section-title{
+            text-align: center;
+            font-size: 28px;
+            color: #387038;
+            margin-bottom: 24px;
+        }
+        /* ========== 阅读板块 ========== */
+        .book-item{
+            background-color: #f4f7ee;
+            border-radius:16px;
+            padding:20px;
+            margin-bottom:16px;
+            display:flex;
+            gap:20px;
+            align-items:center;
+        }
+        .book-item:nth-child(even){
+            flex-direction: row-reverse;
+        }
+        .book-img{
+            width:220px;
+            height:160px;
+            object-fit:cover;
+            border-radius:10px;
+        }
+        .book-text{
+            flex:1;
+            text-align:center;
+        }
+        .book-text h3{
+            font-size:22px;
+            margin-bottom:10px;
+            color:#222;
+        }
+        .book-text p{
+            font-size:15px;
+            color:#444;
+            line-height:1.6;
+        }
+
+        /* ========== 音乐板块 黑胶CD布局 ========== */
+        .cd-container{
+            display:grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap:30px;
+        }
+        .cd-item{
+            text-align:center;
+        }
+        .cd-circle{
+            width:160px;
+            height:160px;
+            border-radius:50%;
+            background:#000;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            margin:0 auto 12px;
+            overflow:hidden;
+        }
+        .cd-img{
+            width:130px;
+            height:130px;
+            border-radius:50%;
+            object-fit:cover;
+        }
+        .cd-item h4{
+            font-size:17px;
+            margin-bottom:6px;
+        }
+        .cd-item p{
+            font-size:14px;
+            color:#555;
+        }
+
+        /* ========== 摄影板块 ========== */
+        .photo-box{
+            overflow:hidden;
+            border-radius:14px;
+        }
+        .photo-row{
+            display:flex;
+            gap:4px;
+        }
+       .photo-row img{
+    flex: 1 1 0;          /* 原来 flex-shrink:0 → 改为可伸缩 */
+    width: 0;             /* 关键：防止原图宽度撑破 */
+    min-width: 0;         /* 关键：允许被压缩 */
+    height: 320px;
+    object-fit: cover;
+    transition: flex-grow .5s ease, filter .4s ease;
+    cursor: pointer;
+}
+.photo-row:hover img{
+    flex-grow: .5;
+    filter: brightness(.75);
+}
+/* 鼠标指到哪一张，哪一张就放大变亮 */
+.photo-row img:hover{
+    flex-grow: 5;
+    filter: brightness(1);
+}
+        .photo-desc{
+            text-align:center;
+            margin-top:14px;
+            color:#555;
+        }
+
+        /* ========== 美食板块（仿照阅读卡片样式） ========== */
+        .food-item{
+            background-color: #f4f7ee;
+            border-radius:16px;
+            padding:20px;
+            margin-bottom:16px;
+            display:flex;
+            gap:20px;
+            align-items:center;
+        }
+        .food-item:nth-child(even){
+            flex-direction: row-reverse;
+        }
+        .food-img{
+            width:220px;
+            height:160px;
+            object-fit:cover;
+            border-radius:10px;
+        }
+        .food-text{
+            flex:1;
+            text-align:center;
+        }
+        .food-text h3{
+            font-size:22px;
+            margin-bottom:10px;
+            color:#222;
+        }
+        .food-text p{
+            font-size:15px;
+            color:#444;
+            line-height:1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <!-- 1.阅读 -->
+        <div class="section">
+            <h2 class="section-title">📗 阅读</h2>
+            <div class="book-item">
+                <img class="book-img" src="book1.png">
+                <div class="book-text">
+                    <h3>《活着》</h3>
+                    <p>人是为活着本身而活着，而不是为了活着之外的任何事物所活着。”<br>福贵的一生经历了太多失去，却依然在岁月里坚守。这本书让我明白，活着本身就是一种力量，平凡的生命也有沉甸甸的意义。</p >
+                </div>
+            </div>
+            <div class="book-item">
+                <img class="book-img" src="book2.jpg">
+                <div class="book-text">
+                    <h3>《云边有个小卖部》</h3>
+                    <p>“为别人活着，也要为自己活着。希望和悲伤，都是一缕光。”<br>刘十三的故事里有青春、遗憾和温暖。在读这本书时，我想起那些遥远的人和事，也懂得了珍惜当下身边的每一缕光。</p >
+                </div>
+            </div>
+            <div class="book-item">
+                <img class="book-img" src="book3.jpg">
+                <div class="book-text">
+                    <h3>《我与地坛》</h3>
+                    <p>“命定的局限尽可永在，不屈的挑战却不可须臾或缺。”<br>史铁生在地坛里思考生命与命运，也在母亲的爱里重新获得前行的勇气。这本书让我学会接受苦难，也学会在安静中寻找生命的意义。</p >
+                </div>
+            </div>
+        </div>
+
+        <!-- 2.我喜欢的歌 -->
+        <div class="section">
+            <h2 class="section-title">🎵 我喜欢的歌</h2>
+            <p style="text-align:center;color:#555;margin-bottom:24px;">有些旋律，是某段时光的缩影。它们陪我走过低谷，也见证了闪光。</p >
+            <div class="cd-container">
+                <div class="cd-item">
+                    <div class="cd-circle">
+                        <img class="cd-img" src="cd1.jpg">
+                    </div>
+                    <h4>《稻香》</h4>
+                    <p>“回家吧，回到最初的美好。”</p >
+                </div>
+                <div class="cd-item">
+                    <div class="cd-circle">
+                        <img class="cd-img" src="cd2.png">
+                    </div>
+                    <h4>《租购》</h4>
+                    <p>在歌词里体会现实生活的无奈与挣扎。</p >
+                </div>
+                <div class="cd-item">
+                    <div class="cd-circle">
+                        <img class="cd-img" src="cd3.png">
+                    </div>
+                    <h4>《难解》</h4>
+                    <p>心事千头万绪，许多情绪终究难解。</p >
+                </div>
+                <div class="cd-item">
+                    <div class="cd-circle">
+                        <img class="cd-img" src="cd4.png">
+                    </div>
+                    <h4>《勋章》</h4>
+                    <p>“前方是未知，迎面是海风”</p >
+                </div>
+                <div class="cd-item">
+                    <div class="cd-circle">
+                        <img class="cd-img" src="cd5.png">
+                    </div>
+                    <h4>《成都》</h4>
+                    <p>“走到玉林路的尽头，坐在小酒馆的门口。”</p >
+                </div>
+                <div class="cd-item">
+                    <div class="cd-circle">
+                        <img class="cd-img" src="cd6.jpg">
+                    </div>
+                    <h4>《梦回还》</h4>
+                    <p>万水千山，不忘来路，一曲梦回还。</p >
+                </div>
+            </div>
+        </div>
+
+        <!--3.摄影 -->
+        <div class="section">
+            <h2 class="section-title">📷 摄影</h2>
+            <p style="text-align:center;color:#555;margin-bottom:24px;">用镜头定格生活的温度，每一张照片都有属于它的故事</p >
+            <div class="photo-box">
+                <div class="photo-row">
+                    <img src="p1.jpg">
+                    <img src="p2.jpg">
+                    <img src="p3.jpg">
+                    <img src="p4.jpg">
+                    <img src="p5.jpg">
+                    <img src="p6.jpg">
+		    <img src="p7.jpg">
+		    <img src="p8.jpg">
+                </div>
+            </div>
+            <p class="photo-desc">鼠标移入可展开</p >
+        </div>
+
+        <!--4.美食 -->
+        <div class="section">
+            <h2 class="section-title">🍜 美食</h2>
+            <p style="text-align:center;color:#555;margin-bottom:24px;">人间烟火气，最抚凡人心。食物是治愈生活的良药。</p >
+            <div class="food-item">
+                <img class="food-img" src="food1.jpg">
+                <div class="food-text">
+                    <h3>姜宝富</h3>
+                    <p>心情不好就去吃姜宝富！给到夯！满足！</p >
+                </div>
+            </div>
+            <div class="food-item">
+                <img class="food-img" src="food2.jpg">
+                <div class="food-text">
+                    <h3>披萨</h3>
+                    <p>刚出炉的饼边焦香酥脆，芝士拉出长长的丝。一口咬下去，饼底的麦香和配料的浓郁在嘴里化开，快乐就是这么简单。</p >
+                </div>
+            </div>
+            <div class="food-item">
+                <img class="food-img" src="food3.jpg">
+                <div class="food-text">
+                    <h3>米村拌饭</h3>
+                    <p>米饭粒粒分明，配菜铺得满满当当，淋上酱汁用力一拌，每一勺都是扎实的满足。忙碌日子里，一碗拌饭就是最好的慰藉。</p >
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
